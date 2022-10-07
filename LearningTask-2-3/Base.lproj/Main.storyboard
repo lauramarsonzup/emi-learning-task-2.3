@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,14 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qual a melhor opção pra você?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMZ-RC-agQ" userLabel="Label Título">
-                                <rect key="frame" x="32" y="76" width="435" height="38.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qual a melhor opção pra você?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMZ-RC-agQ" userLabel="Label Título">
+                                <rect key="frame" x="32" y="80" width="310" height="76.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4h6-Fr-Dz4" userLabel="View Tipos de Produto">
-                                <rect key="frame" x="32" y="146.5" width="350" height="48"/>
+                                <rect key="frame" x="32" y="188.5" width="350" height="48"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KaF-WX-6Ed" userLabel="View Smartphones">
                                         <rect key="frame" x="0.0" y="0.0" width="175" height="48"/>
@@ -39,6 +40,11 @@
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
@@ -57,18 +63,60 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9JM-oa-p9O" userLabel="View Videogames">
+                                        <rect key="frame" x="183" y="0.0" width="167" height="48"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Games" translatesAutoresizingMaskIntoConstraints="NO" id="6jV-j0-oPL">
+                                                <rect key="frame" x="12" y="8" width="32" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="6jV-j0-oPL" secondAttribute="height" multiplier="1:1" id="T4K-uC-Izm"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Videogames" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEY-nK-gO0" userLabel="Label Título">
+                                                <rect key="frame" x="56" y="12" width="99" height="24"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="dEY-nK-gO0" firstAttribute="leading" secondItem="6jV-j0-oPL" secondAttribute="trailing" constant="12" id="0Mh-Mw-yQt"/>
+                                            <constraint firstItem="6jV-j0-oPL" firstAttribute="leading" secondItem="9JM-oa-p9O" secondAttribute="leading" constant="12" id="4GK-Bk-Zdg"/>
+                                            <constraint firstItem="dEY-nK-gO0" firstAttribute="top" secondItem="9JM-oa-p9O" secondAttribute="top" constant="12" id="7Bv-Dg-f4n"/>
+                                            <constraint firstAttribute="bottom" secondItem="dEY-nK-gO0" secondAttribute="bottom" constant="12" id="9c3-CD-B9C"/>
+                                            <constraint firstAttribute="bottom" secondItem="6jV-j0-oPL" secondAttribute="bottom" constant="8" id="GdK-oG-d3M"/>
+                                            <constraint firstAttribute="trailing" secondItem="dEY-nK-gO0" secondAttribute="trailing" constant="12" id="IBq-a5-Bxd"/>
+                                            <constraint firstItem="6jV-j0-oPL" firstAttribute="top" secondItem="9JM-oa-p9O" secondAttribute="top" constant="8" id="uxb-Uk-J33"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="9JM-oa-p9O" firstAttribute="leading" secondItem="KaF-WX-6Ed" secondAttribute="trailing" constant="8" symbolic="YES" id="75i-tU-ARo"/>
+                                    <constraint firstItem="9JM-oa-p9O" firstAttribute="top" secondItem="KaF-WX-6Ed" secondAttribute="top" id="ATQ-uK-Aq7"/>
                                     <constraint firstItem="KaF-WX-6Ed" firstAttribute="top" secondItem="4h6-Fr-Dz4" secondAttribute="top" id="Da8-ft-ktq"/>
+                                    <constraint firstItem="9JM-oa-p9O" firstAttribute="bottom" secondItem="KaF-WX-6Ed" secondAttribute="bottom" id="MOv-Ui-6R4"/>
+                                    <constraint firstItem="9JM-oa-p9O" firstAttribute="height" secondItem="KaF-WX-6Ed" secondAttribute="height" id="RKe-37-dcX"/>
                                     <constraint firstAttribute="bottom" secondItem="KaF-WX-6Ed" secondAttribute="bottom" id="RRZ-Cv-LtF"/>
+                                    <constraint firstAttribute="trailing" secondItem="9JM-oa-p9O" secondAttribute="trailing" id="SFI-V6-XjT"/>
                                     <constraint firstItem="KaF-WX-6Ed" firstAttribute="width" secondItem="4h6-Fr-Dz4" secondAttribute="width" multiplier="0.5" id="h5P-Od-BMI"/>
                                     <constraint firstAttribute="height" constant="48" id="hvL-fq-NFn"/>
                                     <constraint firstItem="KaF-WX-6Ed" firstAttribute="leading" secondItem="4h6-Fr-Dz4" secondAttribute="leading" id="jWg-4H-72H"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PYs-Vz-8TO" userLabel="View Produtos">
-                                <rect key="frame" x="32" y="226.5" width="350" height="603.5"/>
+                                <rect key="frame" x="32" y="268.5" width="350" height="561.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BKe-jG-rXe" userLabel="View Consoles">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="200"/>
@@ -111,6 +159,7 @@
                             <constraint firstItem="6Rj-rl-p3X" firstAttribute="trailing" secondItem="4h6-Fr-Dz4" secondAttribute="trailing" constant="32" id="i83-ca-KH8"/>
                             <constraint firstItem="PYs-Vz-8TO" firstAttribute="top" secondItem="4h6-Fr-Dz4" secondAttribute="bottom" constant="32" id="jLa-tN-1nu"/>
                             <constraint firstItem="sMZ-RC-agQ" firstAttribute="top" secondItem="6Rj-rl-p3X" secondAttribute="top" constant="32" id="jMm-ZA-Of2"/>
+                            <constraint firstAttribute="trailing" secondItem="sMZ-RC-agQ" secondAttribute="trailing" constant="72" id="jWE-jU-r80"/>
                             <constraint firstItem="4h6-Fr-Dz4" firstAttribute="leading" secondItem="sMZ-RC-agQ" secondAttribute="leading" id="nrd-mn-snT"/>
                             <constraint firstItem="6Rj-rl-p3X" firstAttribute="bottom" secondItem="PYs-Vz-8TO" secondAttribute="bottom" constant="32" id="y8e-Of-e2u"/>
                         </constraints>
@@ -122,6 +171,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Games" width="32" height="32"/>
         <image name="Phone" width="32" height="32"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
